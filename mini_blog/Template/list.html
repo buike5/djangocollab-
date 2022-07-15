@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <style>
+        td {
+            width: 100%;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="2px solid black">
+        <ul>
+            (%for object in object_list %)
+            <tr>
+                <td>
+                    <li>{{object.Title}}</li>
+                </td>
+            </tr>
+            <tr>
+                <td>{{object.Body}}</td>
+            </tr>
+            <tr>
+                <td>{{object.Author}}</td>
+            </tr>
+            <tr>
+                <td>{{object.Published_at}}</td>
+            </tr>
+            (%empty%)
+            <tr>
+                <td>No post yet</td>
+            </tr>
+            (%end for%)
+        </ul>
+    </table>
+</body>
+
+</html>
