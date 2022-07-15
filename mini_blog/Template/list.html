@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog</title>
     <style>
-        td {
+     table,   td {
             width: 100%;
-            height: 20px;
+            height: 100px;
         }
     </style>
 </head>
@@ -17,7 +17,7 @@
 <body>
     <table border="2px solid black">
         <ul>
-            (%for object in object_list %)
+            {%for object in object_list %}
             <tr>
                 <td>
                     <li>{{object.Title}}</li>
@@ -32,11 +32,11 @@
             <tr>
                 <td>{{object.Published_at}}</td>
             </tr>
-            (%empty%)
+            {%empty%}
             <tr>
                 <td>No post yet</td>
             </tr>
-            (%end for%)
+            {%endfor%}
         </ul>
     </table>
 </body>
